@@ -1,0 +1,44 @@
+
+<div class="item-list">
+
+<% @items.each do |item| %>
+
+
+  <div class="item">
+    <p class="title">
+		
+		<% if item.status_id > 3 then checked=true   else  checked=false end %>
+			
+	
+		<%= check_box_tag item.id, 1, checked=checked, :class=>"item-complete" %>
+		<span class="title-text"><%= item.title %></span>
+	</p>
+	
+	<div class="details">	
+	
+    <% if item.description.length %>
+		<p class="description"><%= item.description %></p>
+	<% end %>
+	
+
+  
+
+			<p>
+			Status: <%= item.status.name %><br/>   
+	    	Program: <%= item.program.name %>
+			</p>
+	</div>
+	
+	<div class="action-list">
+    	<span class="action"><button id="<%= item.id  %>" class="move-up">Move Up</span>
+    	<span class="action"><button id="<%= item.id  %>" class="move-down">Move Down</span>
+	</div>
+ 
+ </div>
+
+
+
+<% end %>
+
+</div>
+

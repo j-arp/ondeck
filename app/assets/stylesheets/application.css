@@ -1,0 +1,81 @@
+body {
+  background-color:#01244C;
+  background-image:url(https://becomingirish.nd.edu/images/login/blue-backing.png);
+  background-position:initial initial;
+  background-repeat:repeat no-repeat;
+  color:#FFFFFF;
+  font-family:'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  line-height:1.4em;
+  width:100%;
+}
+
+.header{float:left;width:100%; border-bottom:thin solid #f2f2f2}
+	.header-text{font-size:1.4em; font-wieght:bold}
+	
+.content{float:left;width:100%;}
+
+.content>.main{float:left;width:80%}
+	
+.footer{float:left;width:100%; border-top:thin solid #f2f2f2; text-align:center; margin-top:10px}
+	.footer-text{}		
+		
+		
+table{border:1px solid #ccc; width:80% }
+table td{border:none; text-align:left;padding:3px}
+table th{border:none; text-align:left; font-weight:bold; background-color:#336699; color:#f2f2f2 }		
+
+a{color:#FFF}		
+a:visited{color:#CCC}		
+
+
+.field{float:left; width:100%; margin-bottom:10px}
+
+
+
+input,select,textarea{font-size:1em; background-color:#f2f2f2;}
+
+label{float:left; font-weight:bold; font-size:1em; width:22%; text-align:left}
+
+input{padding:4px}
+select{padding:10px; margin:2px;}
+
+
+
+h1{}
+h2{}
+h3{}
+
+p{padding:0px; margin:0px}
+
+.add-item-form{float:right; width:40%; margin-top:50px}
+
+.item-list-target{float:left; width:100%}
+.item-list{float:left; width:90%}
+.item{
+	  background-color:#01244C;
+	  border:2px solid #306198;
+	  color:#DDDDDD;
+	  float:left;
+	  margin:5px;
+	  padding:10px;
+	  width:90%;
+	}
+	
+	.item>p.title{font-size:1.2em; font-weight:bold; border-bottom:2px solid #f2f2f2; width:90%; padding:4px; cursor:pointer}
+	.item>p.details{float:left; width:100%}
+
+
+.action-list{border-top:thin solid #ccc; width:90%; float:left; text-align:right; margin:10px 0px 10px 0px; padding:10px }
+.action{float:left; margin-right:10px}
+
+.toggle-details{
+	float:right;
+	cursor:pointer;
+	padding:4px; 
+	background-color:#f2f2f2; color:#336699;
+}
+	
+div.details{display:none}
+
+
+.item-category{float:left;width:55%; border;thin solid #ccc}

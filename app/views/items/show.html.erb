@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @item.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<p>
+  <b>Effort level:</b>
+  <%= @item.effort_level %>
+</p>
+
+<p>
+  <b>Bcid:</b>
+  <%= @item.bcid %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=  @item.status.level %>: <%=  @item.status.name %>
+</p>
+
+<p>
+  <b>Program:</b>
+  <%= @item.program.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

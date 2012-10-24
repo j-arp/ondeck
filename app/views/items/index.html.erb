@@ -1,0 +1,39 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Effort level</th>
+    <th>Bcid</th>
+    <th>Status</th>
+    <th>Program</th>
+    <th>week/year</th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.title %></td>
+    <td><%= item.description %></td>
+    <td><%= item.effort_level %></td>
+    <td><%= item.bcid %></td>
+
+    <td>	<% if item.status !nil %><%= item.status.name %><% end %></td>
+
+    <td><% if item.status !nil %><%= item.program.name %><% end %></td>
+		
+	<td> <%= item.week %> / <%= item.year %> </td>	
+
+    <td>
+		<%= link_to 'Show', item %> | 
+    	<%= link_to 'Edit', edit_item_path(item) %> | 
+    	<%= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_item_path %>

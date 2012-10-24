@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onDeck</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<div class="header">
+		<span class="header-text">onDeck: what's on deck</span>
+	</div>
+
+	
+
+	<div class="content">
+	
+		<%= yield %>
+	</div>
+	
+	<div class="footer">
+		<p>Copyright 2012 | University of Notre Dame</p>
+	</div>
+</body>
+</html>
