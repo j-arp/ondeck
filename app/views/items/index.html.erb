@@ -1,31 +1,30 @@
 <h1>Listing items</h1>
 
-<table>
+<p>Current week is <b><%= session[:week] %></b>
+
+
+<table cellspacing="0">
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Effort level</th>
-    <th>Bcid</th>
     <th>Status</th>
-    <th>Program</th>
+    <th nowrap="true">Program</th>
     <th>week/year</th>
-    <th></th>
+    <th nowrap="true"></th>
   </tr>
 
 <% @items.each do |item| %>
-  <tr>
-    <td><%= item.title %></td>
+  <tr class="status-<%= item.status.name %>">
+    <td width="25%"><%= item.title %></td>
     <td><%= item.description %></td>
-    <td><%= item.effort_level %></td>
-    <td><%= item.bcid %></td>
 
     <td>	<% if item.status !nil %><%= item.status.name %><% end %></td>
 
-    <td><% if item.status !nil %><%= item.program.name %><% end %></td>
+    <td nowrap="true"><% if item.status !nil %><%= item.program.name %><% end %></td>
 		
 	<td> <%= item.week %> / <%= item.year %> </td>	
 
-    <td>
+    <td nowrap="true">
 		<%= link_to 'Show', item %> | 
     	<%= link_to 'Edit', edit_item_path(item) %> | 
     	<%= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' } %>

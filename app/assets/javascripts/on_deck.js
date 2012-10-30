@@ -22,13 +22,18 @@ jQuery(document).ready(function() {
 	})
 	
 	
-
+	$("input.new-item-submit").click(function(){
+		$("form").fadeTo(.5, 'slow');
+	})
+	
 	
 	$("#new_item").bind("ajax:success", refresh ).bind("ajax:error", function(){alert('error')});
 	
 	
 	
 	function refresh(){
+			$('.new-item-input').val('');
+			
 			xhrLoader.load($('div.item-list-target#upcoming'), '/checklist/status/2');
 			xhrLoader.load($('div.item-list-target#active'), '/checklist/status/3');
 			xhrLoader.load($('div.item-list-target#complete'), '/checklist/status/4');

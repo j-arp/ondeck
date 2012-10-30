@@ -77,5 +77,7 @@ p{padding:0px; margin:0px}
 	
 div.details{display:none}
 
+.status-Active{font-weight:bold}
+.status-Complete{font-weigth:light;color:#ccc}	
 
 .item-category{float:left;width:55%; border;thin solid #ccc}

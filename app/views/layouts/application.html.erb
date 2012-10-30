@@ -12,7 +12,12 @@
 	<div class="header">
 		<span class="header-text">onDeck: what's on deck</span>
 	</div>
-
+	
+	<div class="top-menu">
+		<%= link_to("home", :controller=>'home') %> | 
+		<%= link_to("programs", :controller=>'programs', :action=>'index') %> | 
+		<%= link_to("items", @item) %>
+	</div>	
 	
 
 	<div class="content">

@@ -65,7 +65,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.all(:order=>'week desc')
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @items }

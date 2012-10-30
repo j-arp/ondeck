@@ -5,82 +5,82 @@
 	<key>documents</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>app</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>app</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>config</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>config</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>config.ru</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>db</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>db</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>doc</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>doc</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Gemfile</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Gemfile.lock</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>lib</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>lib</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>log</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>log</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>public</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>selected</key>
+			<key>expanded</key>
 			<true/>
+			<key>name</key>
+			<string>app</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
+			<string>../../authbox/app</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>config</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/config</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../authbox/config.ru</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>db</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/db</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>doc</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/doc</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../authbox/Gemfile</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../authbox/Gemfile.lock</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>lib</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/lib</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>log</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/log</string>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>public</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>../../authbox/public</string>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>Rakefile</string>
+			<string>../../authbox/Rakefile</string>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>README.rdoc</string>
+			<string>../../authbox/README.rdoc</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -88,7 +88,7 @@
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string>script</string>
+			<string>../../authbox/script</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -96,7 +96,7 @@
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string>test</string>
+			<string>../../authbox/test</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -104,7 +104,7 @@
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string>tmp</string>
+			<string>../../authbox/tmp</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -112,7 +112,7 @@
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
-			<string>vendor</string>
+			<string>../../authbox/vendor</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
