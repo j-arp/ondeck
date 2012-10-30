@@ -1,6 +1,10 @@
 
 <div class="item-list">
 
+<% if @items.length == 0 %>
+<p>There are no items currently...</p>
+<% end %>
+
 <% @items.each do |item| %>
 
 
@@ -8,10 +12,17 @@
     <p class="title">
 		
 		<% if item.status_id > 3 then checked=true   else  checked=false end %>
-			
-	
+		
 		<%= check_box_tag item.id, 1, checked=checked, :class=>"item-complete" %>
-		<span class="title-text"><%= item.title %></span>
+		
+		<span class="title-text"><%= item.program.name %>: <%= item.title %></span>
+			<span class="action-list">
+	    	<span class="action"><button id="<%= item.id  %>" class="move-down">Move Down</button></span>
+	    	<span class="action"><button id="<%= item.id  %>" class="move-up">Move Up</button></span>
+			<span class="action"><button id="<%= item.id  %>" class="edit">Edit</button></span>
+		</span>
+
+
 	</p>
 	
 	<div class="details">	
@@ -23,16 +34,12 @@
 
   
 
-			<p>
-			Status: <%= item.status.name %><br/>   
-	    	Program: <%= item.program.name %>
-			</p>
+<p class="status">
+	Status: <%= item.status.name %> for week <%= item.week %>
+</p>
 	</div>
 	
-	<div class="action-list">
-    	<span class="action"><button id="<%= item.id  %>" class="move-up">Move Up</span>
-    	<span class="action"><button id="<%= item.id  %>" class="move-down">Move Down</span>
-	</div>
+
  
  </div>
 

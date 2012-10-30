@@ -1,5 +1,34 @@
 jQuery(document).ready(function() {
 
+
+function sendMsg(msg){
+	$('.msg-central').html(msg);
+	}
+
+
+	$('button.edit').live("click", function(){
+		var id = $(this).attr('id');
+		alert(id);
+		location = '/items/' +  id + "/edit";
+	});
+
+
+
+	$('button.move-up').live("click", function(){
+		var id = $(this).attr('id');
+		var url = '/move/'+id+'/up';
+		sendMsg('item has been moved up a week');
+		xhrLoader.post(url, refresh);
+	});
+
+	$('button.move-down').live("click", function(){
+		var id = $(this).attr('id');
+		var url = '/move/'+id+'/down';
+		sendMsg('item has been moved down a week');
+		xhrLoader.post(url, refresh);
+	});
+
+
 	$('.item-complete').live("click", function(){
 		//alert($(this).attr('id') + ' :: ' + $(this).is(":checked"));
 		var id = $(this).attr('id');

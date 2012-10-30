@@ -6,13 +6,22 @@ body {
   color:#FFFFFF;
   font-family:'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
   line-height:1.4em;
-  width:100%;
+	padding:10px;
 }
+
+p.description{}
+p.status{color:#ccc; font-style:italic}
 
 .header{float:left;width:100%; border-bottom:thin solid #f2f2f2}
 	.header-text{font-size:1.4em; font-wieght:bold}
 	
-.content{float:left;width:100%;}
+	.content {
+	  border-left:thin solid #CCCCCC;
+	  float:left;
+	  margin-left:50px;
+	  padding:1%;
+	  width:90%;
+	}
 
 .content>.main{float:left;width:80%}
 	
@@ -39,7 +48,7 @@ label{float:left; font-weight:bold; font-size:1em; width:22%; text-align:left}
 input{padding:4px}
 select{padding:10px; margin:2px;}
 
-
+.top-menu{float:right; margin-right:50px}
 
 h1{}
 h2{}
@@ -58,15 +67,15 @@ p{padding:0px; margin:0px}
 	  float:left;
 	  margin:5px;
 	  padding:10px;
-	  width:90%;
+	  width:100%;
 	}
 	
-	.item>p.title{font-size:1.2em; font-weight:bold; border-bottom:2px solid #f2f2f2; width:90%; padding:4px; cursor:pointer}
+	.item>p.title{font-size:1.2em; font-weight:bold; border-bottom:2px solid #f2f2f2; width:100%; padding:4px; cursor:pointer}
 	.item>p.details{float:left; width:100%}
 
 
-.action-list{border-top:thin solid #ccc; width:90%; float:left; text-align:right; margin:10px 0px 10px 0px; padding:10px }
-.action{float:left; margin-right:10px}
+.action-list{float:right; width:220px }
+.action{float:right; margin-right:10px}
 
 .toggle-details{
 	float:right;
