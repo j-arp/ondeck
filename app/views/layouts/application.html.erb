@@ -3,6 +3,7 @@
 <head>
   <title>onDeck</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
 
   <%= csrf_meta_tags %>
@@ -11,16 +12,22 @@
 	
 	<div class="header">
 		<span class="header-text">onDeck: what's on deck</span>
+		<span class="header-date">
+			<% time = Time.new  %>
+			<%= time.strftime("%m-%d-%Y") %>
+		</span>
 	</div>
 	
-	<div class="top-menu">
-		<%= link_to("home", :controller=>'home') %> | 
-		<%= link_to("programs", :controller=>'programs', :action=>'index') %> | 
-		<%= link_to("items", @item) %>
-	</div>	
+
 	
 
 	<div class="content">
+
+		<div class="top-menu">
+			<%= link_to("home", :controller=>'home') %> | 
+			<%= link_to("programs", :controller=>'programs', :action=>'index') %> | 
+			<%= link_to("items", @item) %>
+		</div>
 	
 		<%= yield %>
 	</div>

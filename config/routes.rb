@@ -1,4 +1,6 @@
 Ondeck::Application.routes.draw do
+  resources :notes
+
   resources :items
   resources :programs
   resources :statuses
@@ -14,9 +16,14 @@ Ondeck::Application.routes.draw do
   match "/checkoff/:id" => "items#checkoff"
   match "/uncheck/:id" => "items#uncheck"
   match "/user" => "home#user"
+  match "/item/:id/notes" => "items#notes"
+match "/item/saveNote/:id" => "items#saveNote"
   
     match "/move/:id/:dir" => "items#move"
-      match "/checklist/status/:status" => "items#checklist"
+      match "/checklist/status/:status" =>  "items#checklist"
+      
+      
+match "/:controller/:action/:id"  
   #match 'items/checkoff' => 'item#checkoff'
   
   # Sample of named route:

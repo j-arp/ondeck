@@ -15,13 +15,16 @@
 		
 		<%= check_box_tag item.id, 1, checked=checked, :class=>"item-complete" %>
 		
-		<span class="title-text"><%= item.program.name %>: <%= item.title %></span>
-			<span class="action-list">
-	    	<span class="action"><button id="<%= item.id  %>" class="move-down">Move Down</button></span>
-	    	<span class="action"><button id="<%= item.id  %>" class="move-up">Move Up</button></span>
+	
+		
+		<span class="action-list">
+			<span class="action"><button id="<%= item.id  %>" class="notes">Notes (<%= item.notes.length %>)</button></span>
 			<span class="action"><button id="<%= item.id  %>" class="edit">Edit</button></span>
+	    	<span class="action"><button id="<%= item.id  %>" class="move-down">Down</button></span>
+	    	<span class="action"><button id="<%= item.id  %>" class="move-up">Up</button></span>
 		</span>
 
+		<span class="title-text"><%= item.program.name %>: <%= item.title %></span>
 
 	</p>
 	

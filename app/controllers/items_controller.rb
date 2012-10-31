@@ -1,6 +1,23 @@
 class ItemsController < ApplicationController
       layout 'xhr', :only=>[:checklist]
 
+      def notes
+          @item = Item.find(params[:id])
+          @new_note = Note.new
+      end
+
+      
+      def saveNote
+          @item = Item.find(params[:id])
+          @note = Note.new(params[:note])
+          @note.save
+          @item.notes << @note
+          @item.save
+          
+          redirect_to :controller=>"items", :action=>"notes", :id=>params[:id]
+          
+      end
+
 
       def checklist
         
@@ -30,13 +47,25 @@ class ItemsController < ApplicationController
       
       def move
           @item = Item.find(params[:id])
+          
           if params[:dir] == 'up'
-            newweek = @item.week.to_i + 1
+            new_week = @item.week.to_i + 1
+            if new_week.to_i > session[:week].to_i
+                new_status = 2
+              else
+                new_status = @item.status_id
+              end  
           else
-              newweek = @item.week.to_i - 1
+              new_week = @item.week.to_i - 1
+              if new_week.to_i == session[:week].to_i
+                new_status = 3
+              else
+                new_status = @item.status_id
+              end
           end
           
-          @item.week = newweek;
+          @item.week = new_week;
+          @item.status_id = new_status
           @item.save
           render :json => @item
       end
