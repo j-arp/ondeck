@@ -19,9 +19,15 @@
     <%= f.label :title %><br />
     <%= f.text_field :title , :size=>40, :class=>'new-item-input' %>
   </div>
+
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description, :cols=>30, :rows=>5, :class=>'new-item-input' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= date_select :due_date, { :order=>[ :month, :day, :year] } %>
   </div>
 
   <div class="field">

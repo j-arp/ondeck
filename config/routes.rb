@@ -24,6 +24,8 @@ match "/item/saveNote/:id" => "items#saveNote"
       
       
 match "/:controller/:action/:id"  
+
+match "/" => "home#index"
   #match 'items/checkoff' => 'item#checkoff'
   
   # Sample of named route:

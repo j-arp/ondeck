@@ -1,0 +1,31 @@
+
+<h2 class="item">
+   <%= @item.program.name %>: <%= @item.title %>
+</h2>
+
+<%= render "new_note_form" %>
+
+
+
+
+
+
+<h3>Current Notes</h3>
+
+	<% if @item.notes.nil?  %>
+		<p>There are no notes for this item yet...</p>
+	<% else %>
+
+	<% @item.notes.each do |n| %>
+		<p>
+			"<b><%= n.content %></b>"<br/>
+			<i>-- create on <%= n.created_at.strftime("%m-%d-%Y") %></i>
+		</p>
+	<% end %>
+
+	<% end %>
+
+
+
+
+<%= link_to 'Return to Checklist', :controller => 'home' %>

@@ -14,7 +14,7 @@ p.status{color:#ccc; font-style:italic}
 
 .header{float:left;width:100%; border-bottom:2px solid #fff}
 	.header-text{font-size:1.4em; font-wieght:bold; float:left}
-	.header-date{font-size:1em; font-style:italic; font-wieght:bold; }	
+	.header-date{font-size:1em; font-style:italic; font-wieght:bold; margin-left:10px; float:right }	
 	
 	.content {
 	 	border-left-color:#eee;

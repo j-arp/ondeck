@@ -31,14 +31,30 @@
 	<div class="details">	
 	
     <% if item.description.length %>
-		<p class="description"><%= item.description %></p>
+		<p class="description"><%= item.description %>
+		
+		<span class="links">		
+		<br/>		
+		<% unless item.bcid.blank? %>
+
+		<%= link_to "[bc]", item.bcid, :target=>'blank' %>
+		<% end %>
+
+		<% unless item.link.blank? %>
+		<%= link_to "[url]", item.link, :target=>'blank' %>
+		<% end %>
+		</span>
+		</p>
+		
 	<% end %>
 	
 
   
 
 <p class="status">
-	Status: <%= item.status.name %> for week <%= item.week %>
+	Status: <%= item.status.name %> 
+	for  <%= if item.week.to_i ==  session[:week].to_i then  "this week" elsif  item.week.to_i ==  session[:nextweek].to_i then "next week" else "previous week" end   %>
+
 </p>
 	</div>
 	

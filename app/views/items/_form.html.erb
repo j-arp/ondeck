@@ -19,14 +19,29 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= f.text_field :due_date %>
+  </div>
+
   <div class="field">
     <%= f.label :effort_level %><br />
     <%= f.number_field :effort_level %>
   </div>
+  
   <div class="field">
-    <%= f.label :bcid %><br />
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label "Basecamp URL" %><br />
     <%= f.text_field :bcid %>
   </div>
+  
+  
 
   <div class="field">
     <%= f.label :week %><br />

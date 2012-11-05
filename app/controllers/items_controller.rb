@@ -29,6 +29,8 @@ class ItemsController < ApplicationController
           statusid = params[:status]
         end
         
+        
+        
         @items = Item.where("week in (?) and status_id = ? ", session["weeks"], statusid)
         respond_to do |format|
           format.html # checkoff.html.erb
@@ -152,10 +154,13 @@ class ItemsController < ApplicationController
     @item.week = now.strftime('%W')
     @item.year = now.strftime('%Y')
     
+    
+    
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, :notice => 'Item was successfully created.' }
         format.json { render :json => @item, :status => :created, :location => @item }
+        
       else
         format.html { render :action => "new" }
         format.json { render :json => @item.errors, :status => :unprocessable_entity }
@@ -167,7 +172,7 @@ class ItemsController < ApplicationController
   # PUT /items/1.json
   def update
     @item = Item.find(params[:id])
-
+    
     respond_to do |format|
       if @item.update_attributes(params[:item])
         format.html { redirect_to @item, :notice => 'Item was successfully updated.' }

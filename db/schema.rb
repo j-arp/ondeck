@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031180622) do
+ActiveRecord::Schema.define(:version => 20121102134634) do
 
   create_table "items", :force => true do |t|
     t.string   "title"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20121031180622) do
     t.datetime "updated_at",   :null => false
     t.integer  "week"
     t.integer  "year"
+    t.date     "due_date"
+    t.string   "link"
   end
 
   add_index "items", ["program_id"], :name => "index_items_on_program_id"

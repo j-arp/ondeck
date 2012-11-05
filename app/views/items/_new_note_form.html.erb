@@ -1,0 +1,23 @@
+<%= form_for @new_note, :url=>"/item/saveNote/#{@item.id}"  do |f| %>
+
+  <% if @new_note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@new_note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+      <% @new_note.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h3>New Note:</h3>
+    <%= f.text_area :content, :rows=>5, :cols=>80 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

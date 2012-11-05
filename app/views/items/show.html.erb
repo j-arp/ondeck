@@ -10,14 +10,26 @@
   <%= @item.description %>
 </p>
 
+<p>Due on <%= @item.due_date%>
+
 <p>
   <b>Effort level:</b>
   <%= @item.effort_level %>
 </p>
 
 <p>
-  <b>Bcid:</b>
-  <%= @item.bcid %>
+  <b>Website URL:</b>
+  <% unless @item.link.blank? %>
+  <%= link_to  @item.link ,@item.link, :target=>"blank" %> 
+  <% else %>
+  -- -- 
+  <% end %>
+</p>
+
+
+<p>
+  <b>Basecamp:</b>
+  <%= link_to @item.bcid,@item.bcid,  :target=>"blank" %>
 </p>
 
 <p>
