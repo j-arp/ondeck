@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
         
         
         
-        @items = Item.where("week in (?) and status_id = ? ", session["weeks"], statusid)
+        @items = Item.where("week in (?) and status_id = ?", session["weeks"], statusid).order('program_id')
         respond_to do |format|
           format.html # checkoff.html.erb
           format.json { render :json => @items }
